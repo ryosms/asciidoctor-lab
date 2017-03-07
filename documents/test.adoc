@@ -5,7 +5,7 @@
 
 CAUTION: 日本語！
 
-[plantuml,class-diagram,svg]
+[plantuml,images/class-diagram,svg]
 ----
 class test {
 }
