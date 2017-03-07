@@ -1,0 +1,7 @@
+---
+asciidoctor:
+  image: asciidoctor/docker-asciidoctor
+  container_name: asciidoc-uml
+  volumes:
+    - ./documents/:/documents/
+  tty: true

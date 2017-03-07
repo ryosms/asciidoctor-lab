@@ -1,0 +1,12 @@
+= test
+
+* aaa
+* bbb
+
+CAUTION: 日本語！
+
+[plantuml,class-diagram,svg]
+----
+class test {
+}
+----
