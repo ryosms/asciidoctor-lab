@@ -1,0 +1,1 @@
+asciidoctor-pdf -r asciidoctor-diagram -D build/ -B build/ test.adoc
