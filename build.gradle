@@ -1,0 +1,44 @@
+import org.asciidoctor.gradle.AsciidoctorTask
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.asciidoctor:asciidoctor-gradle-plugin:${asciidoctorPluginVersion}"
+        classpath "org.asciidoctor:asciidoctorj-diagram:${asciidoctorDiagramVersion}"
+        classpath "org.asciidoctor:asciidoctorj-pdf:${asciidoctorPdfVersion}"
+    }
+}
+
+apply plugin: 'org.asciidoctor.convert'
+
+asciidoctor {
+    backends = ['html5']
+    requires = ['asciidoctor-diagram']
+    sourceDir = file('docs')
+    outputDir = file('build/')
+    attributes(
+            'imagesdir': "./images"
+    )
+}
+
+task makeHtml(type: AsciidoctorTask, group: 'documentation') {
+    backends = ['html5']
+    requires = ['asciidoctor-diagram']
+    sourceDir = file('docs')
+    outputDir = file('build/')
+    attributes(
+            'imagesdir': "./images"
+    )
+}
+
+task makePdf(type: AsciidoctorTask, group: 'documentation') {
+    backends = ['pdf']
+    requires = ['asciidoctor-diagram']
+    sourceDir = file('docs')
+    outputDir = file('build/')
+    attributes(
+            'imagesdir': "$rootDir/build/pdf/images"
+    )
+}

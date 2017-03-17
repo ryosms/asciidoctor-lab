@@ -1,0 +1,8 @@
+### Gradle template
+.gradle
+/build/
+
+!gradle-wrapper.jar
+
+### JetBrains template
+.idea/

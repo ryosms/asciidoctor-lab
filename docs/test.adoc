@@ -1,0 +1,8 @@
+= テスト
+
+[plantuml,test-diagram,svg]
+....
+class Test {
+    +test()
+}
+....
